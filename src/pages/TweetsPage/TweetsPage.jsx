@@ -1,5 +1,11 @@
+import { TweetCardList } from 'components/TweetCardList/TweetCardList';
+
 const TweetsPage = () => {
-  return <>Tweets</>;
+  return (
+    <>
+      <TweetCardList />
+    </>
+  );
 };
 
 export default TweetsPage;
