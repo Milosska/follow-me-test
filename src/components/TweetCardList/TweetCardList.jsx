@@ -4,9 +4,9 @@ import { List } from './TweetCardList.styled';
 export const TweetCardList = () => {
   return (
     <List>
-      {/* <TweetCard />
       <TweetCard />
-      <TweetCard /> */}
+      <TweetCard />
+      <TweetCard />
     </List>
   );
 };
