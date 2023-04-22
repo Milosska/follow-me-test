@@ -30,6 +30,7 @@ export const GlobalStyles = createGlobalStyle`
 
 
     body {
+      position: relative;
   margin: 0;
   font-family: "MontserratMedium", sans-serif;
   -webkit-font-smoothing: antialiased;
