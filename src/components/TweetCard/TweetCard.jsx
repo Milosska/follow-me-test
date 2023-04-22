@@ -12,7 +12,7 @@ export const TweetCard = () => {
       </ImgBorder>
       <CardText>777 Tweets</CardText>
       <CardText>100500 Followers</CardText>
-      <Button />
+      <Button text="Follow" />
     </Container>
   );
 };

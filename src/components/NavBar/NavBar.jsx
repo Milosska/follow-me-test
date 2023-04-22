@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import {
   NavContainer,
   LogoLink,
@@ -8,6 +9,8 @@ import {
 } from './NavBar.styled';
 
 export const NavBar = () => {
+  const location = useLocation();
+
   const setPicture = () => {
     const ratio = window.devicePixelRatio;
     return ratio > 1
@@ -26,7 +29,9 @@ export const NavBar = () => {
           <NavigationLink to="/">Home</NavigationLink>
         </li>
         <li>
-          <NavigationLink to="/tweets">Tweets</NavigationLink>
+          <NavigationLink to="/tweets" state={{ from: location }}>
+            Tweets
+          </NavigationLink>
         </li>
       </List>
     </NavContainer>

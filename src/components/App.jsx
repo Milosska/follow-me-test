@@ -17,6 +17,7 @@ export const App = () => {
           <Route path="/" element={<GlobalLayout />}>
             <Route index element={<Home />} />
             <Route path="tweets" element={<TweetsPage />} />
+            <Route path="*" element={<Home />} />
           </Route>
         </Routes>
       </Suspense>
