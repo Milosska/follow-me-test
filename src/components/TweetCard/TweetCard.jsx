@@ -1,17 +1,27 @@
 import { Button } from 'components/Button/Button';
-import { Container, ImgBorder, ImgThumb, CardText } from './TweetCard.styled';
+import {
+  Container,
+  ImgBorder,
+  ImgThumb,
+  ImgLabel,
+  CardText,
+} from './TweetCard.styled';
 import * as userImgPlaceholder from '../../images/card/user-placeholder.jpg';
 
-export const TweetCard = () => {
+export const TweetCard = ({ user: { user, avatar, followers, tweets } }) => {
+  const uiFollowers = followers.toLocaleString('en-IN');
+  const uiTweets = tweets.toLocaleString('en-IN');
+
   return (
     <Container>
       <ImgBorder>
+        <ImgLabel>{user}</ImgLabel>
         <ImgThumb>
-          <img src={userImgPlaceholder.default} alt="User" />
+          <img src={avatar ?? userImgPlaceholder.default} alt={user} />
         </ImgThumb>
       </ImgBorder>
-      <CardText>777 Tweets</CardText>
-      <CardText>100500 Followers</CardText>
+      <CardText>{uiTweets} Tweets</CardText>
+      <CardText>{uiFollowers} Followers</CardText>
       <Button text="Follow" />
     </Container>
   );

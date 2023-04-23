@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import * as bgImage from '../../images/card/card-img.png';
 import * as bigBgImage from '../../images/card/card-img@2x.png';
 import * as goitSvg from '../../images/card/goit.svg';
+import * as hoverImg from '../../images/card/user_hover.svg';
 
 export const Container = styled.li`
   position: relative;
@@ -68,6 +69,22 @@ export const ImgThumb = styled.div`
 
   background: #5736a3;
   border-radius: 50%;
+`;
+
+export const ImgLabel = styled.div`
+  display: none;
+  position: absolute;
+  left: -60px;
+  top: -80px;
+  width: 200px;
+  height: 80px;
+  padding: 15px 22px;
+  background-image: ${`url(${hoverImg.default})`};
+  background-repeat: no-repeat;
+
+  ${ImgBorder}:hover & {
+    display: block;
+  }
 `;
 
 export const CardText = styled.p`
