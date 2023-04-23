@@ -21,3 +21,15 @@ export const fetchUsers = async (page, controllerSignal) => {
     console.error(e);
   }
 };
+
+export const updateFollowers = async userData => {
+  try {
+    const response = await axios.put(
+      `${BASE_URL}/users/${userData.id}`,
+      userData
+    );
+    return response.data;
+  } catch (e) {
+    console.error(e);
+  }
+};
