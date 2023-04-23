@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/follow-me-test/static/css/main.c3d5249d.css",
-    "main.js": "/follow-me-test/static/js/main.caab32bf.js",
-    "static/js/544.8b80ff2a.chunk.js": "/follow-me-test/static/js/544.8b80ff2a.chunk.js",
-    "static/js/10.2acebbd0.chunk.js": "/follow-me-test/static/js/10.2acebbd0.chunk.js",
+    "main.js": "/follow-me-test/static/js/main.1de09d25.js",
+    "static/js/485.9233d699.chunk.js": "/follow-me-test/static/js/485.9233d699.chunk.js",
+    "static/js/816.072f27d0.chunk.js": "/follow-me-test/static/js/816.072f27d0.chunk.js",
     "static/js/365.8aaa90b8.chunk.js": "/follow-me-test/static/js/365.8aaa90b8.chunk.js",
     "static/media/Montserrat-SemiBold.ttf": "/follow-me-test/static/media/Montserrat-SemiBold.62b8eee010e3957d425f.ttf",
     "static/media/Montserrat-Medium.ttf": "/follow-me-test/static/media/Montserrat-Medium.a281f04d4c8926e7dea1.ttf",
@@ -15,13 +15,13 @@
     "index.html": "/follow-me-test/index.html",
     "static/media/user_hover.svg": "/follow-me-test/static/media/user_hover.dbf633bd43c201b1e2e1908bd2f9d4db.svg",
     "main.c3d5249d.css.map": "/follow-me-test/static/css/main.c3d5249d.css.map",
-    "main.caab32bf.js.map": "/follow-me-test/static/js/main.caab32bf.js.map",
-    "544.8b80ff2a.chunk.js.map": "/follow-me-test/static/js/544.8b80ff2a.chunk.js.map",
-    "10.2acebbd0.chunk.js.map": "/follow-me-test/static/js/10.2acebbd0.chunk.js.map",
+    "main.1de09d25.js.map": "/follow-me-test/static/js/main.1de09d25.js.map",
+    "485.9233d699.chunk.js.map": "/follow-me-test/static/js/485.9233d699.chunk.js.map",
+    "816.072f27d0.chunk.js.map": "/follow-me-test/static/js/816.072f27d0.chunk.js.map",
     "365.8aaa90b8.chunk.js.map": "/follow-me-test/static/js/365.8aaa90b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.caab32bf.js"
+    "static/js/main.1de09d25.js"
   ]
 }
