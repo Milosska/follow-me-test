@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Main = styled.main`
   min-height: 90vh;
+  background: linear-gradient(to right, #8ca6db, #b993d6);
 `;
 
 export const Footer = styled.main`
