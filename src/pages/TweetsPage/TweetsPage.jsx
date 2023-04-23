@@ -11,7 +11,7 @@ const TweetsPage = () => {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
-  const [enableFetch, setEnableFetch] = useState(true);
+  const [enableFetch, setEnableFetch] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -28,6 +28,7 @@ const TweetsPage = () => {
         }
 
         page === 1 ? setUsers([...data]) : setUsers(prev => [...prev, ...data]);
+        setEnableFetch(true);
       })
       .catch(error => console.log(error))
       .finally(() => setIsLoading(false));
