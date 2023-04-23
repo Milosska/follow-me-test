@@ -12,9 +12,6 @@ export const fetchUsers = async (page, controllerSignal) => {
       },
       signal: controllerSignal,
     });
-    if (response.data.length < CARDS_LIMIT) {
-      return 'End of results';
-    }
 
     return response.data;
   } catch (e) {

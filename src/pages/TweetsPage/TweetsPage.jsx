@@ -21,7 +21,8 @@ const TweetsPage = () => {
       .then(data => {
         if (!data) {
           return;
-        } else if (data === 'End of results') {
+        } else if (data.length < 3) {
+          setUsers(prev => [...prev, ...data]);
           setEnableFetch(false);
           return;
         }
