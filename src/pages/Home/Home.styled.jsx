@@ -6,13 +6,6 @@ export const Container = styled.div`
   padding: 30vh 30vw;
 `;
 
-export const PageHeader = styled.h1`
-  font-family: 'Monoton';
-  color: #5736a3;
-  font-size: 82px;
-  line-height: 88px;
-`;
-
 export const PageMotto = styled.p`
   margin-top: 10px;
   margin-bottom: 30px;
