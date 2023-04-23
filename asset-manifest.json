@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/follow-me-test/static/css/main.c3d5249d.css",
-    "main.js": "/follow-me-test/static/js/main.ce40bcbf.js",
-    "static/js/544.4b693976.chunk.js": "/follow-me-test/static/js/544.4b693976.chunk.js",
-    "static/js/771.41316fea.chunk.js": "/follow-me-test/static/js/771.41316fea.chunk.js",
-    "static/js/322.d0e3ca39.chunk.js": "/follow-me-test/static/js/322.d0e3ca39.chunk.js",
+    "main.js": "/follow-me-test/static/js/main.c0ecf4af.js",
+    "static/js/544.8b80ff2a.chunk.js": "/follow-me-test/static/js/544.8b80ff2a.chunk.js",
+    "static/js/10.c1d161e6.chunk.js": "/follow-me-test/static/js/10.c1d161e6.chunk.js",
+    "static/js/365.8aaa90b8.chunk.js": "/follow-me-test/static/js/365.8aaa90b8.chunk.js",
     "static/media/Montserrat-SemiBold.ttf": "/follow-me-test/static/media/Montserrat-SemiBold.62b8eee010e3957d425f.ttf",
     "static/media/Montserrat-Medium.ttf": "/follow-me-test/static/media/Montserrat-Medium.a281f04d4c8926e7dea1.ttf",
     "static/media/logo@2x.png": "/follow-me-test/static/media/logo@2x.9065f42c8a44e70f017d.png",
@@ -13,14 +13,15 @@
     "static/media/logo.png": "/follow-me-test/static/media/logo.3395c9d8564d98a120ee.png",
     "static/media/goit.svg": "/follow-me-test/static/media/goit.ed8d2d6f7ea349921680afb489ab80b8.svg",
     "index.html": "/follow-me-test/index.html",
+    "static/media/user_hover.svg": "/follow-me-test/static/media/user_hover.dbf633bd43c201b1e2e1908bd2f9d4db.svg",
     "main.c3d5249d.css.map": "/follow-me-test/static/css/main.c3d5249d.css.map",
-    "main.ce40bcbf.js.map": "/follow-me-test/static/js/main.ce40bcbf.js.map",
-    "544.4b693976.chunk.js.map": "/follow-me-test/static/js/544.4b693976.chunk.js.map",
-    "771.41316fea.chunk.js.map": "/follow-me-test/static/js/771.41316fea.chunk.js.map",
-    "322.d0e3ca39.chunk.js.map": "/follow-me-test/static/js/322.d0e3ca39.chunk.js.map"
+    "main.c0ecf4af.js.map": "/follow-me-test/static/js/main.c0ecf4af.js.map",
+    "544.8b80ff2a.chunk.js.map": "/follow-me-test/static/js/544.8b80ff2a.chunk.js.map",
+    "10.c1d161e6.chunk.js.map": "/follow-me-test/static/js/10.c1d161e6.chunk.js.map",
+    "365.8aaa90b8.chunk.js.map": "/follow-me-test/static/js/365.8aaa90b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.ce40bcbf.js"
+    "static/js/main.c0ecf4af.js"
   ]
 }
