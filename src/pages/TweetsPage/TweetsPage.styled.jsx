@@ -5,6 +5,12 @@ export const Container = styled.div`
   padding: 20px 15px;
 `;
 
+export const SelectThumb = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 export const LoadMoreBtn = styled(StyledBtn)`
   display: block;
   margin: 0 auto;

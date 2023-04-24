@@ -2,13 +2,20 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { TweetCardList } from 'components/TweetCardList/TweetCardList';
+import { SelectBar } from 'components/SelectBar/SelectBar';
 import { Loader } from 'components/Loader/Loader';
-import { Container, LoadMoreBtn, BackLink } from './TweetsPage.styled';
+import {
+  Container,
+  SelectThumb,
+  LoadMoreBtn,
+  BackLink,
+} from './TweetsPage.styled';
 import { MdArrowBackIos } from 'react-icons/md';
 import { fetchUsers } from 'helpers/fetchAPI';
 
 const TweetsPage = () => {
   const [users, setUsers] = useState([]);
+  const [filter, setFilter] = useState('all');
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [enableFetch, setEnableFetch] = useState(false);
@@ -45,10 +52,13 @@ const TweetsPage = () => {
   return (
     <>
       <Container>
-        <BackLink as={Link} to={location.state?.from ?? '/'}>
-          <MdArrowBackIos /> Go back
-        </BackLink>
-        <TweetCardList users={users} />
+        <SelectThumb>
+          <BackLink as={Link} to={location.state?.from ?? '/'}>
+            <MdArrowBackIos /> Go back
+          </BackLink>
+          <SelectBar setFilter={setFilter} />
+        </SelectThumb>
+        <TweetCardList users={users} filter={filter} />
         {enableFetch && (
           <LoadMoreBtn onClick={handleLoadMore}>Load more</LoadMoreBtn>
         )}
