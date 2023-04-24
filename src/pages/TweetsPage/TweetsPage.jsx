@@ -18,7 +18,7 @@ const TweetsPage = () => {
   const [filter, setFilter] = useState('all');
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
-  const [enableFetch, setEnableFetch] = useState(false);
+  const [enableFetch, setEnableFetch] = useState(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -58,7 +58,12 @@ const TweetsPage = () => {
           </BackLink>
           <SelectBar setFilter={setFilter} />
         </SelectThumb>
-        <TweetCardList users={users} filter={filter} />
+        <TweetCardList
+          users={users}
+          filter={filter}
+          setPage={setPage}
+          enableFetch={enableFetch}
+        />
         {enableFetch && (
           <LoadMoreBtn onClick={handleLoadMore}>Load more</LoadMoreBtn>
         )}
