@@ -14,22 +14,23 @@ export const TweetCardList = ({ users, filter = 'all' }) => {
   }, [followedUsers]);
 
   useEffect(() => {
+    const unfollowedUsers = [];
+    followedUsers.forEach(user => unfollowedUsers.push(user.id));
+    let newList;
+
     switch (filter) {
       case 'all':
         setList(users);
         break;
 
       case 'follow':
-        const unfollowedUsers = [];
-        followedUsers.forEach(user => unfollowedUsers.push(user.id));
-        const newList = users.filter(
-          user => !unfollowedUsers.includes(user.id)
-        );
+        newList = users.filter(user => !unfollowedUsers.includes(user.id));
         setList(newList);
         break;
 
       case 'followings':
-        setList(followedUsers);
+        newList = users.filter(user => unfollowedUsers.includes(user.id));
+        setList(newList);
         break;
 
       default:
