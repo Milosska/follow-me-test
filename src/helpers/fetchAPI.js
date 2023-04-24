@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const BASE_URL = 'https://6444137690738aa7c07e8004.mockapi.io/followme';
 const CARDS_LIMIT = 3;
@@ -15,9 +16,10 @@ export const fetchUsers = async (page, controllerSignal) => {
 
     return response.data;
   } catch (e) {
-    if (axios.isCancel) {
+    if (axios.isCancel(e)) {
       return;
     }
+    toast.error(e.message);
     console.error(e);
   }
 };
@@ -30,6 +32,7 @@ export const updateFollowers = async userData => {
     );
     return response.data;
   } catch (e) {
+    toast.error(e.message);
     console.error(e);
   }
 };

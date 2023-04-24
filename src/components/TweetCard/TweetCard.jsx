@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from 'components/Button/Button';
+import { updateFollowers } from 'helpers/fetchAPI';
 import {
   Container,
   ImgBorder,
@@ -10,15 +11,22 @@ import {
 import * as userImgPlaceholder from '../../images/card/user-placeholder.jpg';
 
 export const TweetCard = ({ userObj, setFollowedUsers, followed }) => {
-  const uiFollowers = userObj.followers.toLocaleString('en-IN');
-  const uiTweets = userObj.tweets.toLocaleString('en-IN');
-
   const [isActive, setIsActive] = useState(followed);
+  const [currentUser, setCurrentUser] = useState(userObj);
+
+  useEffect(() => {
+    if (currentUser === userObj) {
+      return;
+    }
+
+    updateFollowers(currentUser);
+  }, [currentUser, userObj]);
 
   const handleClick = () => {
     if (!isActive) {
       setIsActive(true);
       setFollowedUsers(prev => [...prev, userObj]);
+      setCurrentUser(prev => ({ ...prev, followers: prev.followers + 1 }));
     } else {
       setIsActive(false);
       setFollowedUsers(prev => {
@@ -27,22 +35,25 @@ export const TweetCard = ({ userObj, setFollowedUsers, followed }) => {
         );
         return newFollowedUsers;
       });
+      setCurrentUser(prev => ({ ...prev, followers: prev.followers - 1 }));
     }
   };
 
   return (
     <Container>
       <ImgBorder>
-        <ImgLabel>{userObj.user}</ImgLabel>
+        <ImgLabel>{currentUser.user}</ImgLabel>
         <ImgThumb>
           <img
-            src={userObj.avatar ?? userImgPlaceholder.default}
-            alt={userObj.user}
+            src={currentUser.avatar ?? userImgPlaceholder.default}
+            alt={currentUser.user}
           />
         </ImgThumb>
       </ImgBorder>
-      <CardText>{uiTweets} Tweets</CardText>
-      <CardText>{uiFollowers} Followers</CardText>
+      <CardText>{currentUser.tweets.toLocaleString('en-IN')} Tweets</CardText>
+      <CardText>
+        {currentUser.followers.toLocaleString('en-IN')} Followers
+      </CardText>
       <Button
         text={isActive ? 'Following' : 'Follow'}
         onClick={handleClick}
