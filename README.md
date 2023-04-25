@@ -26,5 +26,5 @@ Technologies used:
 	<code><img height="50" src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" alt="React" title="React" /></code>
 	<code><img height="50" src="https://user-images.githubusercontent.com/25181517/121401671-49102800-c959-11eb-9f6f-74d49a5e1774.png" alt="npm" title="npm" /></code>
 	<code><img height="50" src="https://user-images.githubusercontent.com/25181517/187955008-981340e6-b4cc-441b-80cf-7a5e94d29e7e.png" alt="webpack" title="webpack" /></code>
-    <code><img height="100" src="https://styled-components.com/logo.png" alt="webpack" title="webpack" /></code>
+    <code><img height="50" src="https://styled-components.com/logo.png" alt="webpack" title="webpack" /></code>
 </div>
