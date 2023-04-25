@@ -14,9 +14,14 @@ export const StyledBar = styled.form`
   line-height: 22px;
   text-transform: uppercase;
   color: #373737;
+
+  & select {
+    appearance: none;
+  }
 `;
 
 export const StyledSelect = styled.select`
+  position: relative;
   width: 200px;
   height: 28px;
   margin-left: 30px;

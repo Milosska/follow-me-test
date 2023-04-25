@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Button } from 'components/Button/Button';
 import { updateFollowers } from 'helpers/fetchAPI';
 import {
@@ -61,4 +62,16 @@ export const TweetCard = ({ userObj, setFollowedUsers, followed }) => {
       />
     </Container>
   );
+};
+
+TweetCard.propTypes = {
+  userObj: PropTypes.shape({
+    user: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    id: PropTypes.string.isRequired,
+    tweets: PropTypes.number.isRequired,
+    followers: PropTypes.number.isRequired,
+  }).isRequired,
+  setFollowedUsers: PropTypes.func.isRequired,
+  followed: PropTypes.bool.isRequired,
 };

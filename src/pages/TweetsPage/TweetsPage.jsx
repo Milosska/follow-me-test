@@ -77,7 +77,7 @@ const TweetsPage = () => {
           setFollowedUsers={setFollowedUsers}
           endOfResults={endOfResults}
         />
-        {enableFetch && (
+        {!isLoading && enableFetch && (
           <LoadMoreBtn onClick={handleLoadMore}>Load more</LoadMoreBtn>
         )}
         {isLoading && <Loader />}

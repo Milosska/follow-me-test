@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { TweetCard } from 'components/TweetCard/TweetCard';
 import { List, Message } from './TweetCardList.styled';
 
@@ -67,4 +67,13 @@ export const TweetCardList = ({
       {emptyMessage && <Message>{emptyMessage}</Message>}
     </>
   );
+};
+
+TweetCardList.propTypes = {
+  users: PropTypes.array.isRequired,
+  filter: PropTypes.string,
+  setEnableFetch: PropTypes.func.isRequired,
+  followedId: PropTypes.array,
+  setFollowedUsers: PropTypes.func.isRequired,
+  endOfResults: PropTypes.bool.isRequired,
 };

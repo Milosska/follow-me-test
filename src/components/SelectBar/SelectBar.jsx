@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { StyledBar, StyledSelect } from './SelectBar.styled';
 
 export const SelectBar = ({ setFilter }) => {
@@ -17,4 +18,8 @@ export const SelectBar = ({ setFilter }) => {
       </label>
     </StyledBar>
   );
+};
+
+SelectBar.propTypes = {
+  setFilter: PropTypes.func.isRequired,
 };
