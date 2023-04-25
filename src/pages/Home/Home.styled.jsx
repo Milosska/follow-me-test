@@ -1,5 +1,6 @@
 import { StyledBtn } from '../../components/Button/Button.styled';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Container = styled.div`
   position: relative;
@@ -20,7 +21,9 @@ export const PageMotto = styled.p`
   line-height: 32px;
 `;
 
-export const TweetLink = styled(StyledBtn)`
+export const Link = styled(StyledBtn)`
   display: inline-block;
   width: 200px;
 `;
+
+export const TweetLink = motion(Link);

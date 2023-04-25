@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const StyledBar = styled.form`
+const Bar = styled.form`
   width: 500px;
   height: 50px;
+  margin-right: 20px;
   padding: 10px 28px;
   background-color: #ebd8ff;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
@@ -19,6 +21,8 @@ export const StyledBar = styled.form`
     appearance: none;
   }
 `;
+
+export const StyledBar = motion(Bar);
 
 export const StyledSelect = styled.select`
   position: relative;

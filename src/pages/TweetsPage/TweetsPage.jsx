@@ -64,7 +64,13 @@ const TweetsPage = () => {
     <>
       <Container>
         <SelectThumb>
-          <BackLink as={Link} to={location.state?.from ?? '/'}>
+          <BackLink
+            as={Link}
+            to={location.state?.from ?? '/'}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+          >
             <MdArrowBackIos /> Go back
           </BackLink>
           <SelectBar setFilter={setFilter} />
@@ -78,7 +84,14 @@ const TweetsPage = () => {
           endOfResults={endOfResults}
         />
         {!isLoading && enableFetch && (
-          <LoadMoreBtn onClick={handleLoadMore}>Load more</LoadMoreBtn>
+          <LoadMoreBtn
+            onClick={handleLoadMore}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+          >
+            Load more
+          </LoadMoreBtn>
         )}
         {isLoading && <Loader />}
       </Container>

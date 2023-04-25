@@ -1,5 +1,6 @@
 import { StyledBtn } from '../../components/Button/Button.styled';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Container = styled.div`
   padding: 20px 15px;
@@ -11,12 +12,14 @@ export const SelectThumb = styled.div`
   align-items: center;
 `;
 
-export const LoadMoreBtn = styled(StyledBtn)`
+const LoadBtn = styled(StyledBtn)`
   display: block;
   margin: 0 auto;
 `;
 
-export const BackLink = styled(StyledBtn)`
+export const LoadMoreBtn = motion(LoadBtn);
+
+const Link = styled(StyledBtn)`
   display: flex;
   align-items: center;
   width: 180px;
@@ -24,3 +27,5 @@ export const BackLink = styled(StyledBtn)`
   color: #373737;
   text-align: center;
 `;
+
+export const BackLink = motion(Link);

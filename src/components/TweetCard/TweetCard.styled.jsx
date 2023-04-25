@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import * as bgImage from '../../images/card/card-img.png';
 import * as bigBgImage from '../../images/card/card-img@2x.png';
 import * as goitSvg from '../../images/card/goit.svg';
 import * as hoverImg from '../../images/card/user_hover.svg';
 
-export const Container = styled.li`
+const Thumb = styled.li`
   position: relative;
   width: 380px;
   height: 460px;
@@ -43,6 +44,8 @@ export const Container = styled.li`
   }
 `;
 
+export const Container = motion(Thumb);
+
 export const ImgBorder = styled.div`
   position: relative;
   z-index: 1;
@@ -72,7 +75,6 @@ export const ImgThumb = styled.div`
 `;
 
 export const ImgLabel = styled.div`
-  display: none;
   position: absolute;
   left: -60px;
   top: -80px;
@@ -81,9 +83,14 @@ export const ImgLabel = styled.div`
   padding: 15px 22px;
   background-image: ${`url(${hoverImg.default})`};
   background-repeat: no-repeat;
+  opacity: 0;
+  scale: 0.7;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   ${ImgBorder}:hover & {
-    display: block;
+    opacity: 1;
+    scale: 1;
   }
 `;
 

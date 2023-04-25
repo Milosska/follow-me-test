@@ -10,8 +10,14 @@ const Home = () => {
         <ParticlesBg />
         <TextThumb>
           <Title />
-          <PageMotto>Fint a tweet to your liking!</PageMotto>
-          <TweetLink as={Link} to="/tweets">
+          <PageMotto>Find a tweet to your liking!</PageMotto>
+          <TweetLink
+            as={Link}
+            to="/tweets"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+          >
             Go to tweets
           </TweetLink>
         </TextThumb>

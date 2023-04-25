@@ -7,7 +7,10 @@ export const SelectBar = ({ setFilter }) => {
   };
 
   return (
-    <StyledBar>
+    <StyledBar
+      whileHover={{ scale: 1.1, backgroundColor: '#5cd3a8' }}
+      transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+    >
       <label>
         Select tweets type
         <StyledSelect name="type" onInput={handleSelect}>

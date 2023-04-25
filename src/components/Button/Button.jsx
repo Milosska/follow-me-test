@@ -1,11 +1,17 @@
 import PropTypes from 'prop-types';
-import { StyledBtn } from './Button.styled';
+import { MotionBtn } from './Button.styled';
 
 export const Button = ({ text, onClick, isActive = false }) => {
   return (
-    <StyledBtn type="button" onClick={onClick} isActive={isActive}>
+    <MotionBtn
+      whileTap={{ scale: 0.9 }}
+      transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+      type="button"
+      onClick={onClick}
+      isActive={isActive}
+    >
       {text}
-    </StyledBtn>
+    </MotionBtn>
   );
 };
 

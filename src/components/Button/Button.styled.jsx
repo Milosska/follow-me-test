@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const StyledBtn = styled.button`
   width: 196px;
@@ -21,8 +22,6 @@ export const StyledBtn = styled.button`
   :focus-visible {
     background-color: #5cd3a8;
   }
-
-  /* :active {
-    background-color: inherit;
-  } */
 `;
+
+export const MotionBtn = motion(StyledBtn);

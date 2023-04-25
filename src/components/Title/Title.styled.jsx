@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const PageHeader = styled.h1`
   font-family: 'Monoton';
-  font-size: 82px;
-  line-height: 88px;
+  font-size: 92px;
+  line-height: 98px;
   color: #5736a3;
 `;
 

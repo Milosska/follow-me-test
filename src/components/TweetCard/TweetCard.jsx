@@ -41,7 +41,20 @@ export const TweetCard = ({ userObj, setFollowedUsers, followed }) => {
   };
 
   return (
-    <Container>
+    <Container
+      initial={{ opacity: 0, scale: 0.7 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.3,
+        ease: [0, 0.71, 0.2, 1.01],
+        scale: {
+          type: 'spring',
+          damping: 5,
+          stiffness: 80,
+          restDelta: 0.001,
+        },
+      }}
+    >
       <ImgBorder>
         <ImgLabel>{currentUser.user}</ImgLabel>
         <ImgThumb>
