@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/follow-me-test/static/css/main.200e89ca.css",
-    "main.js": "/follow-me-test/static/js/main.b5cd6d83.js",
+    "main.js": "/follow-me-test/static/js/main.59deac57.js",
     "static/js/678.1a791dc7.chunk.js": "/follow-me-test/static/js/678.1a791dc7.chunk.js",
-    "static/js/183.62b85957.chunk.js": "/follow-me-test/static/js/183.62b85957.chunk.js",
+    "static/js/399.3a1dc26b.chunk.js": "/follow-me-test/static/js/399.3a1dc26b.chunk.js",
     "static/js/6.d245e17b.chunk.js": "/follow-me-test/static/js/6.d245e17b.chunk.js",
     "static/js/365.8aaa90b8.chunk.js": "/follow-me-test/static/js/365.8aaa90b8.chunk.js",
     "static/media/Montserrat-SemiBold.ttf": "/follow-me-test/static/media/Montserrat-SemiBold.62b8eee010e3957d425f.ttf",
@@ -16,14 +16,14 @@
     "index.html": "/follow-me-test/index.html",
     "static/media/user_hover.svg": "/follow-me-test/static/media/user_hover.dbf633bd43c201b1e2e1908bd2f9d4db.svg",
     "main.200e89ca.css.map": "/follow-me-test/static/css/main.200e89ca.css.map",
-    "main.b5cd6d83.js.map": "/follow-me-test/static/js/main.b5cd6d83.js.map",
+    "main.59deac57.js.map": "/follow-me-test/static/js/main.59deac57.js.map",
     "678.1a791dc7.chunk.js.map": "/follow-me-test/static/js/678.1a791dc7.chunk.js.map",
-    "183.62b85957.chunk.js.map": "/follow-me-test/static/js/183.62b85957.chunk.js.map",
+    "399.3a1dc26b.chunk.js.map": "/follow-me-test/static/js/399.3a1dc26b.chunk.js.map",
     "6.d245e17b.chunk.js.map": "/follow-me-test/static/js/6.d245e17b.chunk.js.map",
     "365.8aaa90b8.chunk.js.map": "/follow-me-test/static/js/365.8aaa90b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.200e89ca.css",
-    "static/js/main.b5cd6d83.js"
+    "static/js/main.59deac57.js"
   ]
 }
