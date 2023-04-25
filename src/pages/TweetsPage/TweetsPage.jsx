@@ -12,14 +12,24 @@ import {
 } from './TweetsPage.styled';
 import { MdArrowBackIos } from 'react-icons/md';
 import { fetchUsers } from 'helpers/fetchAPI';
+import { useFollowing } from 'hooks/useFollowing';
 
 const TweetsPage = () => {
   const [users, setUsers] = useState([]);
+  const [followedUsers, setFollowedUsers] = useState(
+    JSON.parse(localStorage.getItem('followed')) || []
+  );
   const [filter, setFilter] = useState('all');
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [enableFetch, setEnableFetch] = useState(null);
+  const [endOfResults, setEndOfResults] = useState(false);
   const location = useLocation();
+  const followedId = useFollowing(users, followedUsers);
+
+  useEffect(() => {
+    localStorage.setItem('followed', JSON.stringify(followedUsers));
+  }, [followedUsers]);
 
   useEffect(() => {
     setIsLoading(true);
@@ -31,6 +41,7 @@ const TweetsPage = () => {
         } else if (data.length < 3) {
           setUsers(prev => [...prev, ...data]);
           setEnableFetch(false);
+          setEndOfResults(true);
           return;
         }
 
@@ -61,8 +72,10 @@ const TweetsPage = () => {
         <TweetCardList
           users={users}
           filter={filter}
-          setPage={setPage}
-          enableFetch={enableFetch}
+          setEnableFetch={setEnableFetch}
+          followedId={followedId}
+          setFollowedUsers={setFollowedUsers}
+          endOfResults={endOfResults}
         />
         {enableFetch && (
           <LoadMoreBtn onClick={handleLoadMore}>Load more</LoadMoreBtn>
