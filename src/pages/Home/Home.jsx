@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
+
 import { Title } from 'components/Title/Title';
-import { Container, TextThumb, PageMotto, TweetLink } from './Home.styled';
 import { ParticlesBg } from 'components/Particles/Particles';
+import { Container, TextThumb, PageMotto, TweetLink } from './Home.styled';
 
 const Home = () => {
   return (

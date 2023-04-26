@@ -1,18 +1,22 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { useWindowScroll } from 'react-use';
+import { MdArrowBackIos } from 'react-icons/md';
+
+import { useFollowing } from 'hooks/useFollowing';
+import { fetchUsers } from 'helpers/fetchAPI';
+
 import { TweetCardList } from 'components/TweetCardList/TweetCardList';
 import { SelectBar } from 'components/SelectBar/SelectBar';
 import { Loader } from 'components/Loader/Loader';
+import { ButtonUp } from 'components/UpButton/UpButton';
 import {
   Container,
   SelectThumb,
   LoadMoreBtn,
   BackLink,
 } from './TweetsPage.styled';
-import { MdArrowBackIos } from 'react-icons/md';
-import { fetchUsers } from 'helpers/fetchAPI';
-import { useFollowing } from 'hooks/useFollowing';
 
 const TweetsPage = () => {
   const [users, setUsers] = useState([]);
@@ -24,7 +28,9 @@ const TweetsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [enableFetch, setEnableFetch] = useState(null);
   const [endOfResults, setEndOfResults] = useState(false);
+
   const location = useLocation();
+  const { y } = useWindowScroll();
   const followedId = useFollowing(users, followedUsers);
 
   useEffect(() => {
@@ -94,6 +100,7 @@ const TweetsPage = () => {
           </LoadMoreBtn>
         )}
         {isLoading && <Loader />}
+        {y > 500 && <ButtonUp />}
       </Container>
     </>
   );

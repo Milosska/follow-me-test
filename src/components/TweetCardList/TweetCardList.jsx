@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+
 import { TweetCard } from 'components/TweetCard/TweetCard';
 import { List, Message } from './TweetCardList.styled';
 

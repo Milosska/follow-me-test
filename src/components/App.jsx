@@ -1,11 +1,13 @@
 import 'modern-normalize';
 import { GlobalStyles } from './GlobalStyles';
 import 'react-toastify/dist/ReactToastify.css';
+
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+
 import GlobalLayout from './GlobalLayout/GlobalLayout';
 import { Loader } from 'components/Loader/Loader';
-import { ToastContainer } from 'react-toastify';
 
 const Home = lazy(() => import('pages/Home/Home'));
 const TweetsPage = lazy(() => import('pages/TweetsPage/TweetsPage'));

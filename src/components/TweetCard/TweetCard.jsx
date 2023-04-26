@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'components/Button/Button';
 import { updateFollowers } from 'helpers/fetchAPI';
+
+import { Button } from 'components/Button/Button';
+import * as userImgPlaceholder from '../../images/card/user-placeholder.jpg';
 import {
   Container,
   ImgBorder,
@@ -9,7 +11,6 @@ import {
   ImgLabel,
   CardText,
 } from './TweetCard.styled';
-import * as userImgPlaceholder from '../../images/card/user-placeholder.jpg';
 
 export const TweetCard = ({ userObj, setFollowedUsers, followed }) => {
   const [isActive, setIsActive] = useState(followed);
